@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "name": "Delfin",
+    "title": "Programmer & Systems Engineer",
+    "description": "Interested in low-level programming, compiler design, and software engineering.",
+    "location": "Indonesia",
+    "email": "delfin.ibnu.kadafi@gmail.com",
+    "github": "https://github.com/DelfinIbnKadafi"
+  },
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/DelfinIbnKadafi",
+      "icon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLy75c0jh3ZgNIuc_WultRzXJD0Pxxrw7jQNwAoBgq0g&s",
+      "description": "Projects and source code"
+    },
+    {
+      "name": "Email",
+      "url": "mailto:delfin.ibnu.kadafi@gmail.com",
+      "icon": "https://images.seeklogo.com/logo-png/25/2/mail-envelope-symbol-logo-png_seeklogo-254303.png",
+      "description": "Contact me via email"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/delfin-ibnu-kadafi",
+      "icon": "https://images.seeklogo.com/logo-png/37/1/linkedin-icon-logo-png_seeklogo-379483.png",
+      "description": "Professional profile"
+    }
+  ],
+  "projects": [
+    {
+      "name": "El Language",
+      "description": "A high-level programming language with readable syntax, built from scratch in C.",
+      "language": "C",
+      "category": "Programming Language",
+      "image": "images/ellang.png",
+      "status": "In Development",
+      "url": "https://github.com/DelfinIbnKadafi/El-Language"
+    }
+  ]
+}
