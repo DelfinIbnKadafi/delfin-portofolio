@@ -1,5 +1,54 @@
 const $ = selector => document.querySelector(selector);
 
+function arrangeProjects(projectList) {
+  const cards = [...projectList.querySelectorAll(".project-card")];
+  const desktop = window.matchMedia("(min-width: 601px)");
+  let frame = 0;
+
+  // Keep the next card close to the one above it
+  function layoutProjects() {
+    projectList.classList.toggle("is-staggered", desktop.matches);
+
+    if (!desktop.matches) {
+      cards.forEach(card => {
+        card.style.removeProperty("grid-column");
+        card.style.removeProperty("grid-row");
+      });
+      return;
+    }
+
+    const style = getComputedStyle(projectList);
+    const gap = parseFloat(style.getPropertyValue("--project-gap"));
+    const step = parseFloat(style.getPropertyValue("--project-step"));
+    const heights = cards.map(card => Math.ceil(card.getBoundingClientRect().height));
+    const bottoms = [0, 0];
+    let previousTop = -step;
+
+    cards.forEach((card, index) => {
+      const column = index % 2;
+      const top = Math.max(bottoms[column], previousTop + step);
+      card.style.gridColumn = String(column + 1);
+      card.style.gridRow = `${top + 1} / span ${heights[index]}`;
+      bottoms[column] = top + heights[index] + gap;
+      previousTop = top;
+    });
+  }
+
+  function scheduleLayout() {
+    if (frame) return;
+    frame = requestAnimationFrame(() => {
+      frame = 0;
+      layoutProjects();
+    });
+  }
+
+  const observer = new ResizeObserver(scheduleLayout);
+  observer.observe(projectList);
+  cards.forEach(card => observer.observe(card));
+  desktop.addEventListener("change", scheduleLayout);
+  layoutProjects();
+}
+
 async function loadPortfolio() {
   const response = await fetch("./data/data.json");
 
@@ -90,8 +139,8 @@ async function loadPortfolio() {
     projectList.append(card);
   });
 
- 
-  
+  arrangeProjects(projectList);
+
   // Render social links
   const socialList = $("#social-list");
   socialList.replaceChildren();

@@ -292,11 +292,22 @@ nav a:hover,
 }
 
 .project-grid {
+  --project-gap: 27px;
+  --project-step: 80px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  column-gap: 27px;
-  row-gap: 48px;
+  column-gap: var(--project-gap);
+  row-gap: var(--project-gap);
+}
+
+.project-grid.is-staggered {
+  grid-auto-rows: 1px;
+  row-gap: 0;
+}
+
+.project-grid.is-staggered .project-card {
+  margin-top: 0;
 }
 
 .social-icon {
@@ -323,7 +334,7 @@ nav a:hover,
 }
 
 .project-2 {
-  margin-top: clamp(64px, 8vw, 104px);
+  margin-top: var(--project-step);
 }
 
 .project-image {
