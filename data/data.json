@@ -44,6 +44,15 @@
       "image": "https://images-ext-1.discordapp.net/external/fbtoXJJESC7JLzKxObu0VMHgFsr532fLj4YWkGfSNxo/https/opengraph.githubassets.com/5600d6eaa870397ae090d4334825f0f1906c5491e7de020e40afe215a01bd88a/DelfinIbnKadafi/Ingame-Mapping?format=webp",
       "status": "In Development",
       "url": "https://github.com/DelfinIbnKadafi/Ingame-Mapping"
+    },
+    {
+      "name": "Detroit Roleplay",
+      "description": "An open-source SA-MP gamemode built around simple roleplay, designed as a foundation for developing your own roleplay server. Written in Pawn with MySQL configuration and support for hosting on Windows or Linux.",
+      "language": "Pawn",
+      "category": "SA-MP Roleplay Gamemode",
+      "image": "https://images-ext-1.discordapp.net/external/-JEHi3UmjssdqFSdQVS2G7sH1318XTOsQoqNIbsMEQ4/https/opengraph.githubassets.com/093079d0f249cb5fe262d088e514275576534bd21028fb51d03c4061d55d92bf/DelfinIbnKadafi/Detroit-Roleplay?format=webp",
+      "status": "Open Source",
+      "url": "https://github.com/DelfinIbnKadafi/Detroit-Roleplay"
     }
   ]
 }

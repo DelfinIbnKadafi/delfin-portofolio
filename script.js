@@ -61,7 +61,13 @@ async function loadPortfolio() {
     category.textContent = project.category ?? "";
 
     const title = document.createElement("h3");
-    title.textContent = project.name ?? "Untitled Project";
+    const titleLink = document.createElement("a");
+    titleLink.className = "project-title";
+    titleLink.href = imageLink.href;
+    titleLink.target = "_blank";
+    titleLink.rel = "noopener noreferrer";
+    titleLink.textContent = project.name ?? "Untitled Project";
+    title.append(titleLink);
 
     const description = document.createElement("p");
     description.className = "project-description";
