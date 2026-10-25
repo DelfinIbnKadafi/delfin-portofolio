@@ -40,6 +40,7 @@
     {
       "name": "Ingame Mapping",
       "description": "Ingame Mapping is a filterscripts for samp/openmp gamemode. Usually we use another gamemode/server only for making a new mapping,\nbut with Ingame Mapping, you can make mapping in your real time server, so all system, mapping, and all things in your server\nwill show while you make the mapping. Beside mapping ingame, your mapping also exported to txt files with CreateDynamicObject functions.",
+      "language": "Pawn",
       "category": "Sidescript SA-MP/OPEN.MP",
       "image": "https://images-ext-1.discordapp.net/external/fbtoXJJESC7JLzKxObu0VMHgFsr532fLj4YWkGfSNxo/https/opengraph.githubassets.com/5600d6eaa870397ae090d4334825f0f1906c5491e7de020e40afe215a01bd88a/DelfinIbnKadafi/Ingame-Mapping?format=webp",
       "status": "In Development",
