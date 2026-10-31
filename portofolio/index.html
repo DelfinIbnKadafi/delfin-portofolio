@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9fc">
+  <meta name="description" content="Delfin's developer portfolio">
+
+  <meta name="color-scheme" content="only light">
+
+  <title>Delfin — Developer Portfolio</title>
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header class="container header">
+    <a href="#" class="logo">delfin<span>.</span></a>
+
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="availability" href="#contact">
+      <span></span> Open to opportunities
+    </a>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow" id="eyebrow">Software Enginner</p>
+        <h1 id="hero-title">Building software from the inside out.</h1>
+        <p id="hero-description" class="hero-description">
+          Loading profile...
+        </p>
+
+        <div class="hero-actions">
+          <a href="#work" class="button button-primary">
+            Explore my work <span>↘</span>
+          </a>
+          <a id="hero-github" href="#" target="_blank"
+             rel="noopener noreferrer" class="text-link">
+            GitHub ↗
+          </a>
+        </div>
+
+        <p class="location">
+          <span>⌖</span> Based in <span id="location">Indonesia</span>
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          id="hero-image"
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
+          alt="Close-up of electronic components and circuitry"
+        >
+      </div>
+    </section>
+
+    <section class="container intro-strip">
+      <span>WHAT I ENJOY</span>
+      <p>Low Level Programming Language <i>·</i> Compilers <i>·</i> Systems <i>·</i> Creative Coding</p>
+    </section>
+
+    <section id="work" class="container section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A FEW THINGS I'VE BUILT</p>
+          <h2>Selected work<span class="blue-dot">.</span></h2>
+        </div>
+        <p class="section-aside">Experiments, ideas, and projects<br>made one step at a time.</p>
+      </div>
+
+      <div id="project-list" class="project-grid">
+        <p>Loading projects...</p>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-heading">
+          <p class="eyebrow">A LITTLE ABOUT ME</p>
+          <h2>More curious about <span>how it works</span> than how it looks.</h2>
+        </div>
+
+        <div class="about-copy">
+          <p>
+            I enjoy exploring the logic behind software,
+            from memory and parsing to the systems that
+            make applications work.
+          </p>
+          <p>
+            I learn by experimenting, building small projects,
+            breaking things, and figuring out why they broke.
+          </p>
+
+          <div class="principle">
+            <span>MY APPROACH</span>
+            <p>Understand the system. Build with purpose. Keep learning.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact-section">
+      <div class="contact-heading">
+        <p class="eyebrow">ELSEWHERE ON THE INTERNET</p>
+        <h2>Let's connect<span class="blue-dot">.</span></h2>
+        <p>Find my work, explore my code, or send me a message.</p>
+      </div>
+
+      <div id="social-list" class="social-list"></div>
+
+      <a id="contact-email" href="#" class="contact-banner">
+        <div>
+          <span class="eyebrow">HAVE AN IDEA?</span>
+          <h3>Let's make something meaningful.</h3>
+        </div>
+        <span class="banner-arrow">↗</span>
+      </a>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <a href="#" class="logo">delfin<span>.</span></a>
+    <p>© <span id="year"></span> Delfin. Making all feels interesting.</p>
+    <a href="#">Back to top ↑</a>
+  </footer>
+</body>
+</html>

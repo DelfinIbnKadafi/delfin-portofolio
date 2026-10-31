@@ -1,138 +1,208 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f8f9fc">
-  <meta name="description" content="Delfin's developer portfolio">
-
   <meta name="color-scheme" content="only light">
+  <meta
+    name="description"
+    content="Welcome to Delfin's little corner of the web. Explore projects, ideas, and more."
+  >
 
-  <title>Delfin — Developer Portfolio</title>
+  <title>Delfin — Welcome</title>
 
-  <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" href="./logo/logo.png">
+  <link rel="stylesheet" href="./portofolio/style.css">
+  <style>
+    :root {
+      color-scheme: only light;
+    }
 
-  <script src="https://unpkg.com/lucide@latest" defer></script>
-  <script src="./script.js" defer></script>
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .brand img {
+      width: 36px;
+      height: 36px;
+      margin-right: 10px;
+      object-fit: contain;
+    }
+
+    .hero-visual > img {
+      padding: 42px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      object-fit: contain;
+    }
+
+    .hero-visual .image-note {
+      right: -10px;
+    }
+
+    .welcome-section {
+      padding-top: 0;
+    }
+
+    .welcome-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 32px;
+      background: #edf4ff;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+    }
+
+    .welcome-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .welcome-card h2 {
+      margin: 0 0 6px;
+      font-size: clamp(1.35rem, 3vw, 1.8rem);
+      letter-spacing: -0.7px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-visual > img {
+        height: 280px;
+        padding: 28px;
+      }
+
+      .welcome-card {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="container header">
-    <a href="#" class="logo">delfin<span>.</span></a>
+  <header id="top" class="container header">
+    <a class="logo brand" href="https://delfin.my.id/" aria-label="Delfin home">
+      <img src="./logo/logo.png" alt="">
+      Delfin<span>.</span>
+    </a>
 
-    <nav>
-      <a href="#work">Work</a>
+    <nav aria-label="Main navigation">
       <a href="#about">About</a>
+      <a href="./portofolio/">Portfolio</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <a class="availability" href="#contact">
-      <span></span> Open to opportunities
+    <a class="availability" href="https://delfin.my.id/">
+      <span></span> delfin.my.id
     </a>
   </header>
 
   <main>
     <section class="hero container">
       <div class="hero-copy">
-        <p class="eyebrow" id="eyebrow">Software Enginner</p>
-        <h1 id="hero-title">Building software from the inside out.</h1>
-        <p id="hero-description" class="hero-description">
-          Loading profile...
+        <p class="eyebrow">A LITTLE CORNER OF THE WEB</p>
+        <h1>Hi, I’m Delfin. It’s lovely to have you here.</h1>
+        <p class="hero-description">
+          I’m a programmer who enjoys exploring how things work and making
+          useful things along the way. Take a look around.
         </p>
 
         <div class="hero-actions">
-          <a href="#work" class="button button-primary">
-            Explore my work <span>↘</span>
+          <a href="./portofolio/" class="button button-primary">
+            Visit my portfolio <span>↗</span>
           </a>
-          <a id="hero-github" href="#" target="_blank"
-             rel="noopener noreferrer" class="text-link">
-            GitHub ↗
-          </a>
+          <a href="https://delfin.my.id/" class="text-link">delfin.my.id ↗</a>
         </div>
 
         <p class="location">
-          <span>⌖</span> Based in <span id="location">Indonesia</span>
+          <span>⌖</span> Based in Indonesia
         </p>
       </div>
 
       <div class="hero-visual">
-        <img
-          id="hero-image"
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
-          alt="Close-up of electronic components and circuitry"
-        >
+        <img src="./logo/logo.png" alt="Delfin logo">
       </div>
     </section>
 
-    <section class="container intro-strip">
-      <span>WHAT I ENJOY</span>
-      <p>Low Level Programming Language <i>·</i> Compilers <i>·</i> Systems <i>·</i> Creative Coding</p>
+    <section id="about" class="container intro-strip">
+      <span>WELCOME</span>
+      <p>A place for projects, ideas, and the things I’m learning.</p>
     </section>
 
-    <section id="work" class="container section">
-      <div class="section-heading">
+    <section class="container section welcome-section">
+      <div class="welcome-card">
         <div>
-          <p class="eyebrow">A FEW THINGS I'VE BUILT</p>
-          <h2>Selected work<span class="blue-dot">.</span></h2>
+          <h2>Curious to see what I’m working on?</h2>
+          <p>Explore my projects and a little more about me in the portfolio.</p>
         </div>
-        <p class="section-aside">Experiments, ideas, and projects<br>made one step at a time.</p>
-      </div>
-
-      <div id="project-list" class="project-grid">
-        <p>Loading projects...</p>
-      </div>
-    </section>
-
-    <section id="about" class="about-section">
-      <div class="container about-grid">
-        <div class="about-heading">
-          <p class="eyebrow">A LITTLE ABOUT ME</p>
-          <h2>More curious about <span>how it works</span> than how it looks.</h2>
-        </div>
-
-        <div class="about-copy">
-          <p>
-            I enjoy exploring the logic behind software,
-            from memory and parsing to the systems that
-            make applications work.
-          </p>
-          <p>
-            I learn by experimenting, building small projects,
-            breaking things, and figuring out why they broke.
-          </p>
-
-          <div class="principle">
-            <span>MY APPROACH</span>
-            <p>Understand the system. Build with purpose. Keep learning.</p>
-          </div>
-        </div>
+        <a href="./portofolio/" class="button button-primary">
+          Explore the portfolio <span>↗</span>
+        </a>
       </div>
     </section>
 
     <section id="contact" class="container section contact-section">
       <div class="contact-heading">
         <p class="eyebrow">ELSEWHERE ON THE INTERNET</p>
-        <h2>Let's connect<span class="blue-dot">.</span></h2>
+        <h2>Let’s connect<span class="blue-dot">.</span></h2>
         <p>Find my work, explore my code, or send me a message.</p>
       </div>
 
-      <div id="social-list" class="social-list"></div>
+      <div class="social-list">
+        <a
+          class="social-link"
+          href="https://github.com/DelfinIbnKadafi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="social-info">
+            <strong>GitHub</strong>
+            <span>Projects and source code</span>
+          </div>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="social-link" href="mailto:delfin.ibnu.kadafi@gmail.com">
+          <div class="social-info">
+            <strong>Email</strong>
+            <span>Contact me via email</span>
+          </div>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a
+          class="social-link"
+          href="https://www.linkedin.com/in/delfin-ibnu-kadafi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="social-info">
+            <strong>LinkedIn</strong>
+            <span>Professional profile</span>
+          </div>
+          <span class="social-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
 
-      <a id="contact-email" href="#" class="contact-banner">
+      <a href="mailto:delfin.ibnu.kadafi@gmail.com" class="contact-banner">
         <div>
           <span class="eyebrow">HAVE AN IDEA?</span>
-          <h3>Let's make something meaningful.</h3>
+          <h3>Let’s make something meaningful.</h3>
         </div>
-        <span class="banner-arrow">↗</span>
+        <span class="banner-arrow" aria-hidden="true">↗</span>
       </a>
     </section>
   </main>
 
   <footer class="container footer">
-    <a href="#" class="logo">delfin<span>.</span></a>
-    <p>© <span id="year"></span> Delfin. Making all feels interesting.</p>
-    <a href="#">Back to top ↑</a>
+    <a class="logo brand" href="https://delfin.my.id/">
+      <img src="./logo/logo.png" alt="">
+      Delfin<span>.</span>
+    </a>
+    <p>© Delfin. Thanks for stopping by.</p>
+    <a href="#top">Back to top ↑</a>
   </footer>
 </body>
 </html>
