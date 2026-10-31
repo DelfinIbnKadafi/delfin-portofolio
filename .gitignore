@@ -1,5 +1,1 @@
 .vscode/
-.env
-**/.env
-**/node_modules/
-chat/data/
